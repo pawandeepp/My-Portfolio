@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    --hero-bg:#f3f1ee;
+    --rest-bg:#f3f1ee;
+    --font-main:"Bai Jamjuree", sans-serif;
+}
+/* use it using var(--hero-bg); */
+

@@ -1,0 +1,9 @@
+.ser-item:hover{
+background-color: var(--black0-color);
+color: var(--text-white);
+transition:400ms all;
+}
+
+.ser-item:hover>*:nth-child(2){
+    color: var(--text-white);
+}

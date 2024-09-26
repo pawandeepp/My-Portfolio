@@ -1,0 +1,32 @@
+.lets-talk {
+    border: 1px solid #161513;
+    padding: 8px 25px;
+    font-weight: 600;
+    transition: 300ms all;
+}
+.black {
+    border: 1px solid #161513;
+    padding: 8px 25px;
+    font-weight: 600;
+    transition: 300ms all;
+    background-color: #161513;
+    color: white;
+    transition: 300ms all;
+}
+.black:hover button{
+    text-decoration: 1px underline white;
+}
+
+.lets-talk:hover {
+    background-color: #161513;
+    color: white;
+}
+
+.lets-talk:hover button {
+    text-decoration: 1px underline white;
+
+}
+.lets-talk>* {
+    text-align: center;
+    vertical-align: middle;
+}

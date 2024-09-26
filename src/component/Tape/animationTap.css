@@ -1,0 +1,28 @@
+.tape-container{
+    animation: tv 10s linear infinite forwards;
+    /* overflow: scroll; */
+}
+.tap{
+    white-space: nowrap;
+    position: relative;
+}
+.dev2{
+    animation-delay: calc(10 /2);
+    position: relative;
+    animation-duration: 2s;
+}
+.dev3{
+    animation-delay: 10;
+    position: relative;
+    animation-duration: 2s;
+}
+
+@keyframes tv {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-102.5%);
+    }
+}
+

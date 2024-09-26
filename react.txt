@@ -1,0 +1,83 @@
+# react propTypes
+
+ComponentName.propTypes = {
+    anyValue: PropTypes.any, // the prop can be of any data type
+    myString: PropTypes.string, // prop should be a string
+    myNumber: PropTypes.number, // prop should be a number
+    myObject: PropTypes.object, // prop should be an object
+    myArray: PropTypes.array, // prop should be an array
+    myBoolean: PropTypes.bool, // prop should be boolean
+    myFunction: PropTypes.func, // prop should be a function
+    mySymbol: PropTypes.symbol, // prop should be a symbol
+};
+
+
+# making it required with (isRequired) else it show error
+
+Profile.propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    isloggedIn: PropTypes.bool.isRequired,
+};
+
+# Multiple (PropTypes.oneOf()) and (PropTypes.oneOfType())
+- `PropTypes.oneOf()` - The props value must be one of the types passed
+- `PropTypes.oneOfType()` - The props value can be one of many types
+ 
+ (otherwise it throw error)
+
+Profile.propTypes = {
+    // ...
+ name: PropTypes.oneOf(['John', 'Jane']).isRequired,
+}
+
+ Profile.propTypes = {
+    // ...
+    arrayOrObject: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+};
+
+
+# arrayOf (value) - all value must be of same type otherwise it throw error
+
+Profile.propTypes = {
+    // ...
+    myArray: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
+
+# objectOf() - same as above  but for object
+
+Profile.propTypes = {
+    // ...
+    myObject: PropTypes.objectOf(PropTypes.string).isRequired,
+};
+
+# shape({})
+
+ Profile.propTypes = {
+    userDetails: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        age: PropTypes.number.isRequired,
+    }),
+};
+
+# exact({}) - throw error if  any extra property is passed to the object
+
+Profile.propTypes = {
+    userDetails: PropTypes.exact({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        age: PropTypes.number,
+    }).isRequired,
+};
+
+# default values to obj passed
+
+Profile.propTypes = {
+    userDetails : {
+        id:0,
+        name:"john deo",
+        age:30
+    }
+}
+this will only work when you failed to pass this object as props

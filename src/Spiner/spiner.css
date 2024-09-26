@@ -1,0 +1,17 @@
+.spiner{
+    border: 3px solid rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-radius: 50px;
+    animation: spiner .4s linear infinite forwards;
+}
+@keyframes spiner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,127 @@
+.navbar {
+    /* border: 10px solid black; */
+    margin: 0 20px;
+    height: 96px;
+    position: relative;
+
+}
+.list-items{
+    padding-left: 100px;
+}
+
+
+.list-items>* {
+    margin: 0 10px;
+    font-weight: 600;
+    height: 50px;
+    padding: 5px;
+    position: relative;
+    transition: 500ms all;
+}
+
+.list-items>*:hover {
+    color: #EA4334;
+    line-height: 24px;
+}
+
+.list-items>*::after {
+    content: "";
+    width: 80%;
+    border: 1px solid rgba(0, 0, 0, 0.568);
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    right: 0%;
+    text-align: center;
+    transition: 300ms all;
+    opacity: 0;
+}
+.navButton{
+    /* box-shadow: 1px 1px 15px rgb(255, 94, 0); */
+}
+.list-items>*:hover::after {
+    opacity: 1;
+}
+
+@media screen and (max-width:670px) {
+    .navbar {
+        position: relative;
+        z-index: 1000 !important;
+        /* border: 1px solid black; */
+    }
+
+    .list-items {
+        display: none;
+        /* display: flex; */
+        /* transform: translateX(350px); */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--text-white);
+        width: 50%;
+        top: 0;
+        height: 100vh;
+        position: fixed;
+         right: -50%;
+        z-index: -1 !important; 
+        transition: all 0ms;
+        animation: click 0ms linear forwards;
+        padding-left: 0px;
+    }
+
+    .list-items>* {
+        color: var(--black0-color);
+        margin: 10px 10px;
+        font-weight: 600;
+        height: 50px;
+        padding: 5px;
+        transition: 500ms all;
+        position: relative;
+        /* z-index: -1000; */
+    }
+
+    .burderCLick {
+        display: block !important;
+    }
+
+    .list-items>*::after {
+    content: "";
+    width: 80%;
+    border: 1px solid rgba(0, 0, 0, 0.568);
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    right: 0%;
+    text-align: center;
+    transition: 300ms all;
+    opacity: 0;
+}
+
+}
+
+@media screen and (min-width:671px) {
+    .list-items{
+    transform: translateX(0) !important;
+}
+}
+
+@media screen and (max-width:470px) {
+    .navbar {
+        margin: 0;
+    }
+}
+
+@keyframes click {
+    0%{
+        /* transform: translateX(200px); */
+        right: -50%;
+        opacity: 0;
+    }
+    100%{
+        /* transform: translateX(0px); */
+        right: 0%;
+        opacity: 1;
+    }
+}
+
+
